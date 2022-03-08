@@ -14,7 +14,7 @@ import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages'
 import { ConfigMarkDownPlugin } from './markdown'
 import { ConfigRestartPlugin } from './restart'
-
+import qiankun from 'vite-plugin-qiankun'
 
 export function createVitePlugins(isBuild: boolean) {
     const vitePlugins: (Plugin | Plugin[])[] = [
@@ -44,6 +44,7 @@ export function createVitePlugins(isBuild: boolean) {
 
     // rollup-plugin-visualizer
     vitePlugins.push(ConfigVisualizerConfig());
+    vitePlugins.push(qiankun(`vue3`,{useDevMode:true}))
 
     return vitePlugins;
 }

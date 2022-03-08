@@ -47,7 +47,7 @@
     "plopfile.js",
     "tailwind.config.js",
     "postcss.config.js"
-  ],
+, "src/public-path.js"  ],
   "exclude": [
     "node_modules",
     "dist"
